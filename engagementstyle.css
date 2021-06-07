@@ -1,0 +1,118 @@
+body{
+  background-color: #9cb071;
+  color: white;
+}
+
+.details{
+  border: 15px solid #BCB88A;
+  border-radius: 4px;
+  padding: 25px;
+  float: left;
+  height: 500px;
+  margin-right: 25px;
+}
+
+.input{
+  margin-bottom: 40px;
+}
+
+.ddimg{
+  float: left;
+  padding: 5px;
+  border: 15px solid#BCB88A;
+}
+
+.preview{
+  background-image: url("formalp2.png");
+  background-size: cover;
+  float: left;
+  width: 800px;
+  height: 480px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+
+#drop{
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.texts{
+  margin-top: 170px;
+}
+
+#daydate2, #time2, #address2{
+  margin-top: 25px;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup .overlay{
+			position: fixed;
+			top:0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.7);
+			z-index: 1;
+			display: none;
+		}
+		.popup .isi{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%,-50%) scale(0);
+			background: #8a8a8a;
+			width: 450px;
+			height: 220px;
+			z-index: 2;
+			text-align: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.popup .close-btn{
+			cursor: pointer;
+			position: absolute;
+			right: 20px;
+			top:20px;
+			width: 30px;
+			height: 30px;
+			background: #222;
+			color: #fff;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 30px;
+			text-align: center;
+			border-radius: 50%;
+		}
+
+		.popuop.active .overlay{
+			display: block;
+		}
+
+		.popup.active .isi{
+			transition: all 300ms ease-in-out;
+			transform: translate(-50%,-50%) scale(1);
+		}
+		#isibox{
+			margin-top: 50px;
+		}
+
+		#button {
+
+		  top: 10%;
+		  left:10%;
+		  transform: translate(-50%,-50%);
+		  padding: 5px;
+		  background: #fff;
+		  border: none;
+		  outline: none;
+		  font-size: 18px;
+		  text-transform: unset;
+		  cursor: pointer;
+		}

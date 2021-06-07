@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AZA Creates</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
+    <style type="text/css">
+      main{
+    width: 50%;
+    position: absolute;
+    left:25%;
+    align-items: center;
+    text-align: center;
+
+  #title{
+    grid-area: title;
+  }
+  #one{
+    grid-area: one;
+  }
+  #two{
+    grid-area: two;
+  }
+  #three{
+    grid-area: three;
+  }
+  @media only screen and (max-width: 500px){
+    .container{
+      width: 50%;
+      min-height: 50vh;
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    .menu-icon{
+      margin-right: 5%;
+    }
+    main{
+      width: 100%;
+      align-items: center;
+      text-align: center;
+
+    }
+    #title{
+      grid-area: title;
+    }
+    #one{
+      grid-area: one;
+    }
+    #two{
+      grid-area: two;
+    }
+    #three{
+      grid-area: three;
+    }
+    .main{
+      margin-top: 3vh;
+      border: 1px solid #fff;
+      transition:  0.7s ease;
+      padding: 2vh 2vh;
+    }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="logo.jpg" class="logo">
+        <nav>
+          <ul id="menuList">
+            <li id="active"><a href="index.html">Home</a></li>
+            <li><a href="creates.html">Creates</a></li>
+            <li><a href="about.html">About AZA</a></li>
+            <li><a href="contact.html">Contact AZA</a></li>
+          </ul>
+        </nav>
+        <img src="logo.jpg" class="menu-icon" onclick="togglemenu()">
+      </div>
+
+      <main>
+        <div id="title">
+          <h1>AZA Creates!</h1>
+          <h5>create your own invitation card!</h5>
+        </div>
+
+            <a id="two" href="creates.html">
+              <div class="main" >
+                <h1>MAKE YOUR OWN NOW!</h1>
+                <img src="AZAlogo.png">
+              </div>
+            </a>
+
+      </main>
+    </div>
+
+    <script type="text/javascript">
+      var menuList = document.getElementById("menuList");
+
+      menuList.style.maxHeight = "0px";
+
+      function togglemenu(){
+
+        if(menuList.style.maxHeight == "0px"){
+          menuList.style.maxHeight = "130px";
+        }
+        else{
+          menuList.style.maxHeight = "0px";
+        }
+      }
+
+    </script>
+  </body>
+</html>

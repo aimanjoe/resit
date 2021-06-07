@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Engagement Invitation</title>
+    <link rel="stylesheet" href="engagementstyle.css"></link>
+  </head>
+  <body >
+    <h1>OUR ENGAGEMENT DAY</h1>
+
+    <div class="popup" id="popup-1">
+    	<div class="overlay"></div>
+    		<div - class="isi">
+    		<div class="close-btn" onclick="sendmailcuz()">&times;</div>
+    		<h1>Send Card</h1>
+    		<p id="isibox"> INVITATION SENT</p>
+    	</div>
+    <hr>
+    <div class="container">
+      <div class="navbar">
+        <img src="logo.jpg" class="logo">
+        <nav>
+          <ul id="menuList">
+            <li id="active"><a href="index.html">Home</a></li>
+            <li><a href="creates.html">Creates</a></li>
+            <li><a href="about.html">About AZA</a></li>
+            <li><a href="contact.html">Contact AZA</a></li>
+          </ul>
+        </nav>
+    <div class="card">
+
+<!--form input-->
+      <div class="details">
+        <h2>Edit Details</h2>
+
+        <label for="couple">Couples Name: </label>
+        <input id="couple" class="input" type="text" placeholder="Couples Name"/><br>
+
+        <label for="daydate">Day/Date: </label>
+        <input id="daydate" class="input" type="date"/><br>
+
+        <label for="time">Time: </label>
+        <input id="time" class="input" type="text" placeholder="Time 00:00 - 00:00"/><br>
+
+        <label for="address">Address: </label>
+        <input id="address" class="input" type="text" placeholder="Full Address"/><br>
+
+        <button onclick="previewFunction()" type="button" name="button"> Preview </button>
+
+      </div>
+
+      <div id="dragdrop">
+        <h2>Draggable Themes</h2>
+          <div id="img1" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="img1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="200" height="100">
+          </div>
+
+          <div id="img2" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="img2.png" draggable="true" ondragstart="drag(event)" id="drag2" width="200" height="100">
+          </div>
+
+          <div id="img3" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="img5.png" draggable="true" ondragstart="drag(event)" id="drag3" width="200" height="100">
+          </div>
+
+          <div id="img4" class="ddimg" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="img6.png" draggable="true" ondragstart="drag(event)" id="drag4" width="200" height="100">
+          </div>
+      </div>
+
+      <!--preview column-->
+      <section>
+        <div class="preview">
+          <!--drop image--> <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:200px;height:100px;border:2px solid white;"></div>
+
+          <div class="texts">
+            <div id="cnprev"><h2 id="couple2" class="output"></h2></div>
+
+            <div id="dayprev"><h3 id="daydate2" class="output"></h3></div>
+
+            <div id="timeprev"><h3 id="time2" class="output"></h3></div>
+
+            <div id="addprev"><h3 id="address2" class="output"></h3></div>
+          </div>
+
+        </div>
+        <div class="button">
+          <button onclick="favouriteFunction()" type="submit" name="save"> Save </button>
+          <a onclick="sendmailcuz()"><button>Send</button></a>
+        </div>
+
+      </section>
+
+    </div>
+
+<!--javascript preview-->
+<!--javascript drag and drop-->
+    <script type="text/javascript">
+      function previewFunction(){
+        var cn = document.getElementById("couple").value;
+        document.getElementById("couple2").innerHTML = cn;
+
+        var dd = document.getElementById("daydate").value;
+        document.getElementById("daydate2").innerHTML = dd;
+
+        var t = document.getElementById("time").value;
+        document.getElementById("time2").innerHTML = t;
+
+        var add = document.getElementById("address").value;
+        document.getElementById("address2").innerHTML = add;
+      }
+
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+
+      function sendmailcuz(){
+  			var sendmail = localStorage.getItem("couple")
+  			var isibox = document.getElementById("isibox")
+  			document.getElementById("popup-1").classList.toggle("active");
+
+  			if (sendmail == null){
+  				isibox.innerHTML = "INVITATION SENT";
+  			}
+  		}
+
+      function favouriteFunction(){
+        var couple = document.getElementById("couple").value;
+        var daydate = document.getElementById("daydate").value;
+        var time = document.getElementById("time").value;
+        var address = document.getElementById("address").value;
+
+        var cnprev = document.getElementById("couple").value;
+        cnprev.innerHTML = cnprev;
+        var dayprev = document.getElementById("daydate").value;
+        dayprev.innerHTML = dayprev;
+        var timeprev = document.getElementById("time").value;
+        timeprev.innerHTML = timeprev;
+        var addprev = document.getElementById("address").value;
+        addprev.innerHTML = addprev;
+      }
+
+
+    </script>
+  </body>
+</html>

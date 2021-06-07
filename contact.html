@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact AZA</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width">
+	<style type="text/css">
+
+		main{
+  	width: 100%;
+  	display: grid;
+  	align-items: center;
+  	text-align: center;
+  	grid-template-columns: 35% 65%;
+  	grid-template-rows: auto;
+  	grid-template-areas:
+  	"title title"
+  	"one two"
+  	"one two"
+}
+#title{
+	grid-area: title;
+}
+#one{
+	grid-area: one;
+}
+#two{
+	grid-area: two;
+}
+
+		#form form{
+			width: 50%;
+			position: absolute;
+			justify-content: center;
+      left: 25%;
+		}
+		label{
+			font-weight: bold;
+		}
+		input[type=text], select, textarea{
+  		width: 100%;
+  		padding: 10px;
+ 		  border: 1px solid #ccc;
+  		margin-top: 10px;
+  		margin-bottom: 20px;
+  		resize: vertical;
+		}
+		input[type=submit]{
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-right: 2%;
+			padding-left: 2%;
+			text-decoration: none;
+			color: #000;
+			width: 80px;
+			height: 30px;
+			border: 1px solid #000;
+			transition:  0.6s ease;
+		}
+		input[type=submit]:hover{
+			background-color: #000;
+			color: #fff;
+			border: 1px solid #fff;
+		}
+
+@media only screen and (max-width: 700px){
+	.container{
+		width: 100%;
+		min-height: 100vh;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	.menu-icon{
+		margin-right: 5%;
+	}
+	main{
+		margin-left:7%;
+		width: 90%;
+		display: grid;
+		align-items: center;
+		text-align: center;
+		grid-template-columns: 45% 45%;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"title title"
+		"one one"
+		"two two"
+	}
+	#title{
+		grid-area: title;
+	}
+	#one{
+		grid-area: one;
+	}
+	#two{
+		grid-area: two;
+	}
+	.main{
+		margin-top: 3vh;
+		border: 1px solid #fff;
+		transition:  0.7s ease;
+		padding: 2vh 2vh;
+	}
+}
+
+	</style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img src="logo.jpg" class="logo">
+      <nav>
+        <ul id="menuList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="creates.html">Creates</a></li>
+          <li><a href="about.html">About AZA</a></li>
+					<li id="active"><a href="contact.html">Contact AZA</a></li>
+        </ul>
+      </nav>
+      <img src="logo.jpg" class="menu-icon" onclick="togglemenu()">
+    </div>
+
+		<main>
+			<div id="title">
+				<h1>Contact AZA</h1>
+				<h5>please leave us your feedback</h5>
+			</div>
+
+					<div id="form">
+							<form action="">
+       							<label for="fname">Your Full Name</label>
+        						<input type="text" id="fullname" name="fullname" placeholder="Your fullname..">
+       							<label for="mail">Your E-mail</label>
+       				 			<input type="text" id="email" name="email" placeholder="Your email..">
+        						<label for="text">Text</label>
+       				 			<textarea id="text" name="text" placeholder="feedback.." style="height:170px"></textarea>
+        						<input type="submit" value="Submit">
+      						</form>
+					</div>
+		</main>
+	</div>
+
+	<script type="text/javascript">
+		var menuList = document.getElementById("menuList");
+
+		menuList.style.maxHeight = "0px";
+
+		function togglemenu(){
+
+			if(menuList.style.maxHeight == "0px"){
+				menuList.style.maxHeight = "130px";
+			}
+			else{
+				menuList.style.maxHeight = "0px";
+			}
+		}
+
+
+	</script>
+
+</body>
+</html>

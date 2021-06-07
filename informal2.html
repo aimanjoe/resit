@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sports Day Theme</title>
+	<link rel="stylesheet" href="informal2style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Freckle+Face&family=Goblin+One&family=New+Tegomin&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
+	<style type="text/css">
+		main{
+	width: 100%;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	grid-template-columns: 25% 25% 50%;
+	grid-template-rows: auto;
+	grid-template-areas:
+	"title title title"
+	"zero zero zero"
+	"one three two"
+	"one three two"
+}
+#title{
+	grid-area: title;
+}
+#zero{
+	grid-area: zero;
+}
+#one{
+
+	grid-area: one;
+}
+#two{
+	grid-area: three;
+}
+#two form{
+
+	justify-content: center;
+		}
+#two input{
+		margin-bottom: 2vh;
+	}
+#zero div button{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 2%;
+	padding-left: 2%;
+	margin-right: 3%;
+	margin-left: 3%;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #000;
+	transition:  0.6s ease;
+}
+#zero div button:hover{
+	color: #fff;
+	background-color: #000;
+	border: 1px solid #fff;
+}
+#zero{
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+#color{
+	justify-content: center;
+}
+#font{
+	margin-bottom: 20vh;
+}
+
+.popup .overlay{
+			position: fixed;
+			top:0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.7);
+			z-index: 1;
+			display: none;
+		}
+		.popup .isi{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%,-50%) scale(0);
+			background: #fff;
+			width: 450px;
+			height: 220px;
+			z-index: 2;
+			text-align: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.popup .close-btn{
+			cursor: pointer;
+			position: absolute;
+			right: 20px;
+			top:20px;
+			width: 30px;
+			height: 30px;
+			background: #222;
+			color: #fff;
+			font-size: 25px;
+			font-weight: 600;
+			line-height: 30px;
+			text-align: center;
+			border-radius: 50%;
+		}
+
+		.popuop.active .overlay{
+			display: block;
+		}
+
+		.popup.active .isi{
+			transition: all 300ms ease-in-out;
+			transform: translate(-50%,-50%) scale(1);
+		}
+		#isibox{
+			margin-top: 50px;
+		}
+
+		#button {
+
+		  top: 10%;
+		  left:10%;
+		  transform: translate(-50%,-50%);
+		  padding: 5px;
+		  background: #fff;
+		  border: none;
+		  outline: none;
+		  font-size: 18px;
+		  text-transform: unset;
+		  cursor: pointer;
+		}
+@media only screen and (max-width: 700px){
+main{
+
+		width: 100%;
+		display: grid;
+		align-items: center;
+		text-align: center;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"title title "
+		"zero zero"
+		"one one"
+		"two two"
+
+	}
+	#title{
+		grid-area: title;
+	}
+	#zero{
+		grid-area: zero;
+	}
+	#one{
+		grid-area: one;
+	}
+
+	#two{
+		grid-area: two;
+		margin-bottom: 20px;
+	}
+	.main{
+		margin-top: 3vh;
+		border: 1px solid #fff;
+		transition:  0.7s ease;
+		padding: 2vh 2vh;
+	}
+	#color{
+		margin-bottom: 4vh;
+		justify-content: center;
+	}
+	#font{
+		margin-bottom: 3vh;
+	}
+	#display{
+		font-size: 90%;
+	}
+
+	#display h1{
+		padding-top: 10%;
+	}
+	#three form{
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+		justify-content: center;
+	}
+	#three input{
+		margin-bottom: 3vh;
+	}
+
+}
+	</style>
+</head>
+<body>
+<div class="popup" id="popup-1">
+	<div class="overlay"></div>
+		<div - class="isi">
+		<div class="close-btn" onclick="sendmailcuz()">&times;</div>
+		<h1>Send Card</h1>
+		<p id="isibox"> INVITATION SENT TO</p>
+	</div>
+</div>
+<div class="container">
+  <div class="navbar">
+    <img src="sports.jpg" class="logo">
+    <nav>
+      <ul id="menuList">
+        <li id="active"><a href="index.html">Home</a></li>
+        <li><a href="creates.html">Creates</a></li>
+        <li><a href="about.html">About AZA</a></li>
+        <li><a href="contact.html">Contact AZA</a></li>
+      </ul>s
+    </nav>
+    <img src="AZAlogo.png" class="menu-icon" onclick="togglemenu()">
+  </div>
+
+		<main>
+			<div id="title">
+				<h1>SPORTS DAY!!!</h1>
+				<h4>lets just have some compertative fun day guy!</h4>
+
+
+					<div id="zero">
+						<div>
+							<a href="creates.html"><button>go back to choose template</button></a>
+
+
+							<a onclick="sendmailcuz()"><button>Send the card to the receiver</button></a>
+						</div>
+					</div>
+
+					<div id="one">
+
+						<div id="color">
+							<div id="colorBGcuz"></div>
+							<div id="colorTitlecuz"></div>
+						</div>
+
+					</div>
+				<div>
+					<button id="button">Switch Color</button>
+
+						<div id="display">
+							<h1 id="dgreetingcuz"></h1><br>
+							<h2 id="dnamecuz"></h2><br>
+							<h3 id="ddatecuz"></h3><br>
+							<h4 id="dtimecuz"></h4>
+							<h4 id="daddress1cuz"></h4><br>
+							<h4 id="daddress2cuz"></h4><br>
+							<h3 id="daddress3cuz"></h3>
+						</div>
+
+				</div>
+					<div id="two" >
+
+						<br><br>
+							<form id="form">
+
+								<label>Event: </label>
+								<input type="text" id="namecuz" placeholder="Enter Event..."><br>
+								<label>Receiver name: </label>
+								<input type="text" id="datecuz" placeholder="Enter name..."><br>
+								<label>Date: </label>
+								<input type="date" id="timecuz" placeholder="Enter time..."><br>
+								<label>Time: </label>
+								<input type="time" id="address1cuz" placeholder="Enter name..."><br>
+								<label>Location: </label>
+								<input type="address" id="address2cuz" placeholder="Enter Address..."><br>
+								<label>Your Name: </label>
+								<input type="text" id="address3cuz" placeholder="Enter name..."><br>
+							</form>
+
+							<button onclick="previewfcuz()">save & preview</button>
+							<button onclick="clearformcuz()">clear</button>
+							<button onclick="favouritecuz()">mark as favourite content</button>
+
+						</div>
+					</div>
+
+	<script type="text/javascript">
+
+
+		var color = ["#75cdd8","#f0f2e7","#ff8296","#ffca27","#ffec00","#pink"];
+		var i = 0;
+		document.getElementById("button").addEventListener("click",function(){
+			i = i < color.length ? ++i : 0;
+			document.getElementById("display").style.background = color[i]
+		})
+
+
+		var menuList = document.getElementById("menuList");
+
+		menuList.style.maxHeight = "0px";
+
+		function togglemenu(){
+
+			if(menuList.style.maxHeight == "0px"){
+				menuList.style.maxHeight = "130px";
+			}
+			else{
+				menuList.style.maxHeight = "0px";
+			}
+		}
+
+		function sendmailcuz(){
+			var sendmail = localStorage.getItem("datecuz")
+			var isibox = document.getElementById("isibox")
+			document.getElementById("popup-1").classList.toggle("active");
+
+			if (sendmail == null){
+				isibox.innerHTML = "the receiver name cannot be empty! don't forget to press 'save & preview' button";
+			}else{
+				isibox.innerHTML =  "INVITATION SENT TO " + sendmail;
+			}
+		}
+
+		function previewfcuz(){
+
+			var namecuz = document.getElementById("namecuz");
+			var datecuz = document.getElementById("datecuz");
+			var timecuz = document.getElementById("timecuz");
+			var address1cuz = document.getElementById("address1cuz");
+			var address2cuz = document.getElementById("address2cuz");
+			var address3cuz = document.getElementById("address3cuz");
+
+			localStorage.setItem("namecuz",namecuz.value);
+			localStorage.setItem("datecuz",datecuz.value);
+			localStorage.setItem("timecuz",timecuz.value);
+			localStorage.setItem("address1cuz",address1cuz.value);
+			localStorage.setItem("address2cuz",address2cuz.value);
+			localStorage.setItem("address3cuz",address3cuz.value);
+
+			var dnamecuz = document.getElementById("dnamecuz");
+			var ddatecuz = document.getElementById("ddatecuz");
+			var dtimecuz = document.getElementById("dtimecuz");
+			var daddress1cuz = document.getElementById("daddress1cuz");
+			var daddress2cuz = document.getElementById("daddress2cuz");
+			var daddress3cuz = document.getElementById("daddress3cuz");
+
+			dnamecuz.innerHTML = "Event: "+localStorage.getItem("namecuz");
+			ddatecuz.innerHTML= localStorage.getItem("datecuz") +" , You Are invited!";
+			dtimecuz.innerHTML= "Date: "+localStorage.getItem("timecuz");
+			daddress1cuz.innerHTML= "Time: "+localStorage.getItem("address1cuz");
+			daddress2cuz.innerHTML= "Location: "+localStorage.getItem("address2cuz");
+			daddress3cuz.innerHTML= "From: "+ localStorage.getItem("address3cuz");
+		}
+
+		function clearformcuz(){
+			document.getElementById("form").reset();
+			document.getElementById("two").reset();
+		}
+
+		function favouritecuz(){
+
+			var namecuz = document.getElementById("namecuz");
+			var datecuz = document.getElementById("datecuz");
+			var timecuz = document.getElementById("timecuz");
+			var address1cuz = document.getElementById("address1cuz");
+			var address2cuz = document.getElementById("address2cuz");
+			var address3cuz = document.getElementById("address3cuz");
+
+
+			localStorage.setItem("fnamecuz",namecuz.value);
+			localStorage.setItem("fdatecuz",datecuz.value);
+			localStorage.setItem("ftimecuz",timecuz.value);
+			localStorage.setItem("faddress1cuz",address1cuz.value);
+			localStorage.setItem("faddress2cuz",address2cuz.value);
+			localStorage.setItem("faddress3cuz",address3cuz.value);
+
+			let colorPickercuz = document.getElementById("colorBGcuz");
+			localStorage.setItem("fbgColorcuz",colorPickercuz.value);
+
+			let colorPickerTcuz = document.getElementById("colorTitlecuz");
+			localStorage.setItem("ftColorcuz",colorPickerTcuz.value);
+
+		}
+
+	</script>
+
+</body>
+</html>
